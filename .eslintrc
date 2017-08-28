@@ -1,0 +1,54 @@
+{
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:jest/recommended"
+    ],
+    "env": {
+        "browser": true,
+        "node": true,
+        "mocha": true,
+        "es6": true,
+        "jest/globals": true
+    },
+    "plugins": [
+      "react",
+      "jest"
+    ],
+    "rules": {
+        "no-template-curly-in-string": "error",
+        "no-unsafe-negation": "error",
+        "curly": "error",
+        "eqeqeq": "error",
+        "no-console": "warn",
+        "no-eval": "error",
+        "no-implicit-globals": "error",
+        "no-implied-eval": "error",
+        "no-unused-expressions": "error",
+        "strict": "error",
+        "global-require": "error",
+        "indent": ["error", 4],
+        "linebreak-style": ["error", "unix"],
+        "quotes": ["error", "double"],
+        "semi": ["error", "always"],
+        "array-bracket-spacing": ["error", "never"],
+        "comma-dangle": ["error", "never"],
+        "brace-style": ["error", "stroustrup"],
+        "func-style": ["error", "expression"],
+        "spaced-comment": ["error", "always"],
+        # override default options for rules from base configurations
+        "no-cond-assign": ["error", "always"],
+        "new-parens": "error",
+      #  "jest/no-disabled-tests": "warn",
+      #  "jest/no-focused-tests": "error",
+      #  "jest/no-identical-title": "error",
+    },
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true,
+            "experimentalObjectRestSpread": true
+        }
+    }
+}
