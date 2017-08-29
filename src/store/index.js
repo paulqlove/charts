@@ -1,11 +1,15 @@
-/*eslint no-undef: "warn"*/
-import thunk from "redux-thunk";
-import { applyMiddleware, createStore } from "redux";
-// import { itemsHasErrored } from '../actions/index';
-// import combineReducers from "../reducers/index";
-import configureStore from './configureStore'
+/*  eslint no-undef: "off" */
+// import thunk from "redux-thunk";
+// import { applyMiddleware, createStore } from "redux";
+import { itemsFetchData } from "../actions/index";
+// import combineReducers from "../reducers/index.jsx";
+import configureStore from "./configureStore"
 
 
-const store = configureStore(false);
+const defaultState = {
+    items: (url) => dispatch(itemsFetchData(url))
+
+};
+const store = configureStore();
 
 export default store;
