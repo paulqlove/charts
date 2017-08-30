@@ -1,5 +1,5 @@
 import React from "react";
-import { string, number } from "prop-types";
+import { string, number, array } from "prop-types";
 
 class Line extends React.Component {
 
@@ -13,11 +13,12 @@ class Line extends React.Component {
 
     render() {
         let { path, stroke, fill, strokeWidth } = this.props;
+        
         return (
             <path
                 d={path}
                 fill="none"
-                stroke="blue"
+                stroke={stroke}
                 strokeWidth= "5"
             />
         );
@@ -25,7 +26,7 @@ class Line extends React.Component {
 }
 Line.propTypes = {
     path: string,
-    stroke: string,
+    stroke: array,
     fill: string,
     strokeWidth: number
 };

@@ -44,11 +44,11 @@ class DataSeries extends React.Component {
                 return yScale(d.y);
             });
         let lines = lineData.points.map((series, id) => {
-
+            let stroke = ["steelblue","chocolate","limegreen"];
             return (
                 <Line
                     path={line(series)}
-                    stroke={d3.color(id)}
+                    stroke={d3.color(stroke[id])}
                     key={id}
                 />
             );
